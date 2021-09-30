@@ -4,22 +4,31 @@ namespace Pingpong\Dada;
 
 class Matche
 {
-    private $player1;
-    private $player2;
-    private $NbSets;
+    private array $players;
+    private int $nbSets;
+    private array $setWon;
 
-    function __construct(object $player1, object $player2, int $NbSets)
+    function __construct(object $player1, object $player2, int $nbSets)
     {
-        $this->player1 = $player1;
-        $this->player2 = $player2;
-        $this->NbSets = $NbSets;
+        $this->players[0] = $player1;
+        $this->players[1] = $player2;
+        $this->nbSets = $nbSets;
     }
 
 
     public function StartNewMatch()
     {
-        echo ($this->player1->GetName() . " joue contre " . $this->player2->GetName());
+        echo ($this->players[0]->GetName() . " joue contre " . $this->players[1]->GetName());
 
         $NewSet = new NewSet();
+
+        do
+        {
+            
+
+        }
+        while ($setWon[0]=$this->nbSets or $setWon[1]=$this->nbSets);
     }
+
+
 }

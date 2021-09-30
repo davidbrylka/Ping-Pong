@@ -4,18 +4,15 @@ namespace Pingpong\Dada;
 
 class NewSet
 {
-    boolval $cd;
-    
-    private array $Pointsplayer;
-     $cd;
+
 
     function playSet()
     {
 
-        do{
+        // do{
 
-        }
-        while ($cd);
+        // }
+        // while ($cd);
    
             echo ('Fin de set');
         
