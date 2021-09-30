@@ -1,4 +1,4 @@
-<?php
+git <?php
 
 require 'vendor/autoload.php';
 
