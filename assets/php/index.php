@@ -5,15 +5,15 @@ require 'vendor/autoload.php';
 use Pingpong\Dada\Matche;
 use Pingpong\Dada\Player;
 
-$PlayerOne=new Player("Eric");
-var_dump($PlayerOne);
-$PlayerTwo=new Player("Laurent");
-var_dump($PlayerTwo);
+$PlayerOne=new Player("Bruno");
+$PlayerTwo=new Player("Eric");
 
-echo($PlayerOne->getName()." vs ".$PlayerTwo->Getname()."<br>");
+// Init new match with 3 winning sets
 
-$Match=new Matche($PlayerOne, $PlayerTwo,3);
+$NewMatch=new Matche($PlayerOne, $PlayerTwo,3);
 
-$Match->StartNewMatch();
+$NewMatch->StartNewMatch();
+
+
 
 ?>
