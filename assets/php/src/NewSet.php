@@ -4,18 +4,16 @@ namespace Pingpong\Dada;
 
 class NewSet
 {
-    private array $Score = array();
-    private int $delta;
+    private array $points = array(0, 0);
+    private int $deltaPlayers;
 
-
-    function playSet(): int
+    function addPoint($playerNumber): void
     {
-        $this->Score[0] = 0;
-        $this->Score[1] = 0;
-
-
-        // return $random;
-        echo ('Fin de set');
-        return 0;
+        $this->points[$playerNumber]++;
+    }
+    function isFinished(): bool
+    {
+        $deltaPlayers = abs($this->points[0] - $this->points[1]);
+        return $this->points[0] >= 11 || $this->points[1] >= 11;
     }
 }
