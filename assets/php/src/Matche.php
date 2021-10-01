@@ -26,10 +26,10 @@ class Matche
         $currentSet = new NewSet();
 
         // Boucle jusqu'a qu'un Set des joueurs atteignent NbSets;
-        do {
+        // do {
             $setNumberWon = $currentSet->playset();
             $this->setWon[$setNumberWon]++;
-        } while ($this->setWon[$setNumberWon] = $this->nbSets);
+        // } while ($this->setWon[$setNumberWon] = $this->nbSets);
         
 
     }
