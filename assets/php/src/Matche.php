@@ -26,7 +26,6 @@ class Matche
     {
         $this->sets[] = new NewSet();
 
-
     }
     function getCurrentSet()
     {

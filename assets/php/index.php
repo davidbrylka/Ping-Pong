@@ -12,17 +12,17 @@ $PlayerTwo = new Player("Eric");
 // Init new match with 3 winning sets
 
 $NewMatch = new Matche($PlayerOne, $PlayerTwo, 3);
-
 $NewMatch->StartNewMatch();
-// $NewMatch->addSet();
 
 $currentSet = $NewMatch->getCurrentSet();
 
-for ($i=0; $i < 200 ; $i++) { 
+for ($i = 0; $i < 200; $i++) {
 
-if (!$currentSet->isFinished()) {
-    $currentSet->addPoint(rand(0,1));
-}
+    if (!$currentSet->isFinished()) {
+        $currentSet->addPoint(rand(0, 1));
+    } else {                        // If set finished, verify 3 winning sets
+        // echo ("set gagné part : ".$NewMatch->giveWinner());
+    }
 }
 
 
