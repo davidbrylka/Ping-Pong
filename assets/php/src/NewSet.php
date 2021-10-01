@@ -18,14 +18,14 @@ class NewSet
         $moreThanEleven = ($this->points[0] >= 11 or $this->points[1] >= 11);
         return $deltaScorePlayers and $moreThanEleven;
     }
-    
+
     function getPoints(int $playerNumber): int
     {
         return $this->points[$playerNumber];
     }
 
-    function giveWinner(): bool
+    function giveWinner(): int
     {
-        return $this->points[0]>$this->points[1];
+        return ($this->points[0] > $this->points[1])?0:1;
     }
 }
