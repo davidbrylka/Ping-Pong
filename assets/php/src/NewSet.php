@@ -10,7 +10,6 @@ class NewSet
     function addPoint(int $playerNumber): void
     {
         $this->points[$playerNumber]++;
-        // echo ("Points : ".$this->points[$playerNumber]." <br>" );
     }
 
     function isFinished(): bool
