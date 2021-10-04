@@ -40,9 +40,8 @@ for ($i = 0; $i < 400; $i++) {
             $currentSet = $match->getCurrentSet();
         }
     }
-    //  } while ($Setwon[$currentSet->giveWinner()] = 3);
 }
-
+//   } while ($Setwon[$lastSet->giveWinner()]> 2);
 
 
 die();
