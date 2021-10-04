@@ -18,10 +18,11 @@ $match->StartNewMatch();
 
 $currentSet = $match->getCurrentSet();
 
-for ($i = 0; $i < 400; $i++) {
+$actualSetWon = 0;
 
-    // do {
-
+// for ($i = 0; $i < 400; $i++) {
+// $lastSet=$currentSet;
+do {
     if (!$currentSet->isFinished()) {
         $currentSet->addPoint(rand(0, 1));
     } else {                        // If set finished, verify 3 winning sets
@@ -29,7 +30,8 @@ for ($i = 0; $i < 400; $i++) {
         $winner = $currentSet->giveWinner();
         echo ("set gagné par : " . $Players[$currentSet->giveWinner()]->getName() . "<br> ");
         $setwon[$currentSet->giveWinner()]++;
-
+        $actualSetWon = $setwon[$currentSet->giveWinner()]>=3;
+        
         if ($setwon[$currentSet->giveWinner()] >= 3) {
             break;
         }
@@ -40,8 +42,7 @@ for ($i = 0; $i < 400; $i++) {
             $currentSet = $match->getCurrentSet();
         }
     }
-}
-//   } while ($Setwon[$lastSet->giveWinner()]> 2);
+} while (true);               // ($actualSetWon);
 
 
 die();
