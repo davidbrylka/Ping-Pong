@@ -1,4 +1,19 @@
-@startuml "Ping Pong"
+@startuml "PingPong"
 
+skinparam actorstyle hollow 
+actor "Arbitre" as Arbitre
+left to right direction
+
+rectangle PingPong {
+    usecase "Lancer Set" as launchSet
+    usecase "Lancer match" as launchMatch
+    usecase "Ajouter point" as displayScore
+    usecase "Ajouter joueurs" as addPlayers
+}
+
+Arbitre --> launchMatch
+Arbitre --> launchSet
+Arbitre --> displayScore
+Arbitre --> addPlayers
 
 @enduml
