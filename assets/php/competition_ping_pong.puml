@@ -1,0 +1,35 @@
+@startuml "Enfer"
+class Matchesimple{
+
+}
+class Matchdouble{
+
+}
+
+class Arbitre{
+    attribut : name
+}
+
+class Joueurs{
+    attribut : name
+    attribut : capitaine flag
+    attribut : classement
+}
+
+class Set{
+    methode : service()
+}
+
+class Score{
+
+}
+
+class Rencontre{
+
+}
+class Historique{
+
+}
+
+
+@enduml
