@@ -1,14 +1,3 @@
-var btn = document.querySelector('input');
-var txt = document.querySelector('p');
+var btn = document.getElementById('button 1');
+var txt = document.querySelector('button 2');
 
-btn.addEventListener('click', updateBtn);
-
-function updateBtn() {
-  if (btn.value === 'Démarrer la machine') {
-    btn.value = 'Arrêter la machine';
-    txt.textContent = 'La machine est démarrée !';
-  } else {
-    btn.value = 'Démarrer la machine';
-    txt.textContent = 'La machine est arrêtée.';
-  }
-}

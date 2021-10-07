@@ -6,7 +6,7 @@ use Pingpong\Dada\Matche;
 use Pingpong\Dada\Player;
 use Pingpong\Dada\Score;
 
-$Players = array(0, 0);
+$Players = array(0);
 
 $Players[0] = new Player("Bruno");
 $Players[1] = new Player("Eric");
@@ -25,9 +25,8 @@ do {
     } else {                        // If set finished, verify 3 winning sets
 
         $winner = $currentSet->giveWinner();
-        echo ("set gagné par : " . $Players[$currentSet->giveWinner()]->getName() . "<br> ");
         $setwon[$currentSet->giveWinner()]++;
-        $actualSetWon = $setwon[$currentSet->giveWinner()] >= 3;
+        echo ("set gagné par : " . $Players[$currentSet->giveWinner()]->getName() . "<br> ");
 
         if ($setwon[$currentSet->giveWinner()] < 3) {
             echo ($setwon[$currentSet->giveWinner()] . " <br>");
