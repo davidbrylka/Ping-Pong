@@ -20,6 +20,7 @@ class Joueurs{
 }
 
 class Set{
+    methode : service ()
 }
 
 class Score{
@@ -34,16 +35,16 @@ class Historique{
 }
 
 Joueurs <--o Rencontre
-Matchesimple <--o Rencontre
-Matchedouble <--o Rencontre
+Matchesimple <-- Rencontre
+Matchedouble <-- Rencontre
 
 Historique*-->Score
 
 Set *--> Score
-Matchesimple *-->Set
-Matchedouble *-->Set
+Matchesimple -->Set
+Matchedouble -->Set
 
-Arbitre o-->Rencontre
+Arbitre <--o Rencontre
 
 
 
