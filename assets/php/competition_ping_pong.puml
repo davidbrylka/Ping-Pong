@@ -1,6 +1,9 @@
 @startuml "Enfer"
 
 left to right direction
+skinparam Linetype polyline
+skinparam linetype ortho
+
 
 class Matchesimple{
 
@@ -34,14 +37,18 @@ class Historique{
 
 }
 
-Joueurs <--o Rencontre : aggrégation
-Matchesimple *-->Rencontre : composition
-Matchedouble *-->Rencontre : composition
+Joueurs <--o Rencontre
+Matchesimple *-->Rencontre
+Matchedouble *-->Rencontre
 
-Historique*-->Score : composition
+Historique*-->Score
 
 Arbitre *--> Matchesimple
 Arbitre *--> Matchedouble
+
+Set *--> Score
+Matchesimple *-->Set
+Matchedouble *-->Set
 
 
 
