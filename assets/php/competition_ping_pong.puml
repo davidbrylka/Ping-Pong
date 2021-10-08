@@ -38,8 +38,8 @@ class Historique{
 }
 
 Joueurs <--o Rencontre
-Matchesimple *-->Rencontre
-Matchedouble *-->Rencontre
+Matchesimple <--o Rencontre
+Matchedouble <--o Rencontre
 
 Historique*-->Score
 
