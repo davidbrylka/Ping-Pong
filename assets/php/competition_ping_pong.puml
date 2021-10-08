@@ -5,9 +5,10 @@ left to right direction
 class Matchesimple{
 
 }
-class Matchdouble{
+class Matchedouble{
 
 }
+
 
 class Arbitre{
     attribut : name
@@ -15,12 +16,11 @@ class Arbitre{
 
 class Joueurs{
     attribut : name
-    attribut : capitaine flag
+    attribut : capitaine
     attribut : classement
 }
 
 class Set{
-    methode : service()
 }
 
 class Score{
@@ -33,6 +33,19 @@ class Rencontre{
 class Historique{
 
 }
+
+Joueurs <--o Rencontre : aggrégation
+Matchesimple *-->Rencontre : composition
+Matchedouble *-->Rencontre : composition
+
+Historique*-->Score : composition
+
+Arbitre *--> Matchesimple
+Arbitre *--> Matchedouble
+
+
+
+
 
 
 @enduml
