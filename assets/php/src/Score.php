@@ -1,4 +1,0 @@
-<?php
-namespace Pingpong\Dada;
-
-?>

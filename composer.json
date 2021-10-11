@@ -1,0 +1,18 @@
+{
+    "name": "pingpong/dada",
+    "description": "Pingpong points counting",
+    "autoload": {
+        "psr-4": {
+            "Pingpong\\Dada\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "DavidB",
+            "email": "david.b@jagware.org"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
