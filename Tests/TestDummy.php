@@ -1,29 +1,34 @@
-<?php declare(strict_types=1);
-
+<?php
 use PHPUnit\Framework\TestCase;
 
-final class EmailTest extends TestCase
+class StackTest extends TestCase
 {
-    public function testCanBeCreatedFromValidEmailAddress(): void
+    public function testEmpty()
     {
-        $this->assertInstanceOf(
-            Email::class,
-            Email::fromString('user@example.com')
-        );
+        $stack = [];
+        $this->assertEmpty($stack);
+
+        return $stack;
     }
 
-    public function testCannotBeCreatedFromInvalidEmailAddress(): void
+    /**
+     * @depends testEmpty
+     */
+    public function testPush(array $stack)
     {
-        $this->expectException(InvalidArgumentException::class);
+        array_push($stack, 'foo');
+        $this->assertSame('foo', $stack[count($stack)-1]);
+        $this->assertNotEmpty($stack);
 
-        Email::fromString('invalid');
+        return $stack;
     }
 
-    public function testCanBeUsedAsString(): void
+    /**
+     * @depends testPush
+     */
+    public function testPop(array $stack)
     {
-        $this->assertEquals(
-            'user@example.com',
-            Email::fromString('user@example.com')
-        );
+        $this->assertSame('foo', array_pop($stack));
+        $this->assertEmpty($stack);
     }
 }

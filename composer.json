@@ -12,7 +12,7 @@
             "email": "david.b@jagware.org"
         }
     ],
-    "require-dev": {
+    "require": {
         "phpunit/phpunit": "^9.5"
     }
 }

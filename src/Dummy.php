@@ -1,37 +1,18 @@
-<?php declare(strict_types=1);
+<?php
+use PHPUnit\Framework\TestCase;
 
-namespace Pingpong\Dada;
-
-final class Email
+class Dummy extends TestCase
 {
-    private $email;
-
-    private function __construct(string $email)
+    public function testPushAndPop()
     {
-        $this->ensureIsValidEmail($email);
+        $stack = [];
+        $this->assertSame(0, count($stack));
 
-        $this->email = $email;
-    }
+        array_push($stack, 'foo');
+        $this->assertSame('foo', $stack[count($stack)-1]);
+        $this->assertSame(1, count($stack));
 
-    public static function fromString(string $email): self
-    {
-        return new self($email);
-    }
-
-    public function __toString(): string
-    {
-        return $this->email;
-    }
-
-    private function ensureIsValidEmail(string $email): void
-    {
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    '"%s" is not a valid email address',
-                    $email
-                )
-            );
-        }
+        $this->assertSame('foo', array_pop($stack));
+        $this->assertSame(0, count($stack));
     }
 }
