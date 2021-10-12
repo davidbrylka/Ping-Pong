@@ -5,6 +5,6 @@ class Random
 {
     public function randomNumber($limitSup)
     {
-     return 10;                       //rand(0,10);
+     return rand(0,$limitSup);
     }
 }

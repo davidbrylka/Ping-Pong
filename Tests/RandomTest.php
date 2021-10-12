@@ -8,7 +8,9 @@ class RandomTest extends TestCase
 
     public function testValeurRetour()
     {
-        $newvar = new Random();
-        $this->assertEquals(11, $newvar->randomNumber(20), "Random number");
+        for ($i = 0; $i < 30; $i++) {
+            $newvar = new Random();
+            $this->assertNotEquals(10, $newvar->randomNumber(20), "Random number");
+        }
     }
 }
